@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="false">
+  <test name="Test">
+    <classes>
+      <class name="com.demo.test.testcaseforexcel.getAreaByCity_001_Succ_Test"/>
+      <class name="com.demo.test.testcaseforexcel.getAreaByCity_002_Succ_Test"/>
+    </classes>
+  </test> <!-- Test -->
+ <listeners>
+     <!-- arrow插件实现用例失败重跑以及生成测试报告 -->
+<listener class-name="com.demo.arrow.TestResultListener" />
+<listener class-name="com.demo.arrow.RetryListener" />
+<listener class-name="com.demo.arrow.PowerEmailableReporter" />
+</listeners>
+</suite> <!-- Suite -->

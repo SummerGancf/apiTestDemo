@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG Report</title>
+<style type="text/css">
+table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}
+td,th {border:1px solid #009;padding:.25em .5em}
+.result th {vertical-align:bottom}
+.param th {padding-left:1em;padding-right:1em}
+.param td {padding-left:.5em;padding-right:2em}
+.stripe td,.stripe th {background-color: #E6EBF9}
+.numi,.numi_attn {text-align:right}
+.total td {font-weight:bold}
+.passedodd td {background-color: #0A0}
+.passedeven td {background-color: #3F3}
+.skippedodd td {background-color: #CCC}
+.skippedodd td {background-color: #DDD}
+.failedodd td,.numi_attn {background-color: #F33}
+.failedeven td,.stripe .numi_attn {background-color: #D00}
+.stacktrace {white-space:pre;font-family:monospace}
+.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="testOverview">
+<tr><th>Test</th><th>Methods<br/>Passed</th><th>Scenarios<br/>Passed</th><th># skipped</th><th># failed</th><th>Total<br/>Time</th><th>Included<br/>Groups</th><th>Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em"><a href="#t1">Test</a></td><td class="numi">3</td><td class="numi">3</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.8 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="methodOverview" id="summary">
+<tr><th>Class</th><th>Method</th><th>Authors</th><th># of<br/>Scenarios</th><th>Running Counts</th><th>Parameters</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr id="t1"><th colspan="5">Test &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">com.demo.test.testcase.Compare</td><td><a href="#m1499933130"><b>compare_getAreaByCity_Fail</b> (BaseCase) </a></td><td>GanCF</td><td class="numi">1</td><td>1</td><td></td><td>1489631008248</td><td class="numi">590</td></tr><tr class="passedodd"><td><a href="#m1500339438"><b>compare_getAreaByCity_Succ</b> (BaseCase) </a></td><td>GanCF</td><td class="numi">1</td><td>1</td><td></td><td>1489631008839</td><td class="numi">124</td></tr>
+<tr class="passedeven"><td>com.demo.test.testcase.Compare_queryGhtRegwaterView</td><td><a href="#m-1254495115"><b>compare_queryGhtRegwaterAll_queryGhtRegwaterView</b> (BaseCase) </a></td><td>GanCF</td><td class="numi">1</td><td>1</td><td></td><td>1489631008966</td><td class="numi">29</td></tr>
+</table>
+<h1>Test</h1>
+<h2 id="m-1254495115" name="m-1254495115" >com.demo.test.testcase.Compare_queryGhtRegwaterView:compare_queryGhtRegwaterAll_queryGhtRegwaterView</h2>
+<div>
+【正常用例】:<br/>
+请求1地址: http://10.0.1.2:8080/WSGW/rest?&Api=SolrRegwater.SolrService.queryGhtRegwaterAll&Param={"tag":1,"start":0,"limit":10,"ghthospitalid":31,"ghthosdeptid":545}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}<br/>
+返回结果1: {"Message":"IP：172.18.5.134不在允许范围内，不允许连接,Code=20005","Code":"20005"}<br/>
+请求2地址: http://10.0.1.2:8080/WSGW/rest?&Api=SolrRegwater.SolrService.queryGhtRegwaterView&Param={"tag":1,"start":0,"limit":10,"ghthospitalid":31,"ghthosdeptid":545}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}<br/>
+返回结果2: {"Message":"IP：172.18.5.134不在允许范围内，不允许连接,Code=20005","Code":"20005"}<br/>
+<---测试结果---><br/>
+比较响应数据  - 参数  -  请求1参数值  -  请求1参数值<br/>
+Diff  -  key  -  value1  -  value2<br/>
+assert - Message - IP：172.18.5.134不在允许范围内，不允许连接,Code=20005 - IP：172.18.5.134不在允许范围内，不允许连接,Code=20005<br/>
+assert - Code - 20005 - 20005<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m1499933130" name="m1499933130" >com.demo.test.testcase.Compare:compare_getAreaByCity_Fail</h2>
+<div>
+【正常用例】:<br/>
+请求1地址: http://service.yihu.com:8085/WSGW/rest?&Api=baseinfo.CommonApi.getAreaByCity&Param={"cityId":32}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}<br/>
+返回结果1: {"Code":10000,"Message":"成功","Result":[{"areaId":396,"areaName":"东胜区"},{"areaId":397,"areaName":"达拉特旗"},{"areaId":398,"areaName":"准格尔旗"},{"areaId":399,"areaName":"鄂托克前旗"},{"areaId":400,"areaName":"鄂托克旗"},{"areaId":401,"areaName":"杭锦旗"},{"areaId":402,"areaName":"乌审旗"},{"areaId":403,"areaName":"伊金霍洛旗"}]}<br/>
+请求2地址: http://service.yihu.com:8085/WSGW/rest?&Api=baseinfo.CommonApi.getAreaByCity&Param={"cityId":32}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}&Api=baseinfo.CommonApi.getAreaByCity&Param={"cityId":31}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}<br/>
+返回结果2: {"Code":10000,"Message":"成功","Result":[{"areaId":396,"areaName":"东胜区"},{"areaId":397,"areaName":"达拉特旗"},{"areaId":398,"areaName":"准格尔旗"},{"areaId":399,"areaName":"鄂托克前旗"},{"areaId":400,"areaName":"鄂托克旗"},{"areaId":401,"areaName":"杭锦旗"},{"areaId":402,"areaName":"乌审旗"},{"areaId":403,"areaName":"伊金霍洛旗"}]}<br/>
+<---测试结果---><br/>
+比较响应数据  - 参数  -  请求1参数值  -  请求1参数值<br/>
+Diff  -  key  -  value1  -  value2<br/>
+assert - Code - 10000 - 10000<br/>
+assert - Message - 成功 - 成功<br/>
+assert - areaId - 396 - 396<br/>
+assert - areaName - 东胜区 - 东胜区<br/>
+assert - areaId - 397 - 397<br/>
+assert - areaName - 达拉特旗 - 达拉特旗<br/>
+assert - areaId - 398 - 398<br/>
+assert - areaName - 准格尔旗 - 准格尔旗<br/>
+assert - areaId - 399 - 399<br/>
+assert - areaName - 鄂托克前旗 - 鄂托克前旗<br/>
+assert - areaId - 400 - 400<br/>
+assert - areaName - 鄂托克旗 - 鄂托克旗<br/>
+assert - areaId - 401 - 401<br/>
+assert - areaName - 杭锦旗 - 杭锦旗<br/>
+assert - areaId - 402 - 402<br/>
+assert - areaName - 乌审旗 - 乌审旗<br/>
+assert - areaId - 403 - 403<br/>
+assert - areaName - 伊金霍洛旗 - 伊金霍洛旗<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m1500339438" name="m1500339438" >com.demo.test.testcase.Compare:compare_getAreaByCity_Succ</h2>
+<div>
+【正常用例】:<br/>
+请求1地址: http://service.yihu.com:8085/WSGW/rest?&Api=baseinfo.CommonApi.getAreaByCity&Param={"cityId":32}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}&Api=baseinfo.CommonApi.getAreaByCity&Param={"cityId":31}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}&Api=baseinfo.CommonApi.getAreaByCity&Param={"cityId":32}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}<br/>
+返回结果1: {"Code":10000,"Message":"成功","Result":[{"areaId":396,"areaName":"东胜区"},{"areaId":397,"areaName":"达拉特旗"},{"areaId":398,"areaName":"准格尔旗"},{"areaId":399,"areaName":"鄂托克前旗"},{"areaId":400,"areaName":"鄂托克旗"},{"areaId":401,"areaName":"杭锦旗"},{"areaId":402,"areaName":"乌审旗"},{"areaId":403,"areaName":"伊金霍洛旗"}]}<br/>
+请求2地址: http://service.yihu.com:8085/WSGW/rest?&Api=baseinfo.CommonApi.getAreaByCity&Param={"cityId":32}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}&Api=baseinfo.CommonApi.getAreaByCity&Param={"cityId":31}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}&Api=baseinfo.CommonApi.getAreaByCity&Param={"cityId":32}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}&Api=baseinfo.CommonApi.getAreaByCity&Param={"cityId":32}&AuthInfo={"SessionKey":"","ClientId":"1000000","Sign":"","ClientVersion":""}<br/>
+返回结果2: {"Code":10000,"Message":"成功","Result":[{"areaId":396,"areaName":"东胜区"},{"areaId":397,"areaName":"达拉特旗"},{"areaId":398,"areaName":"准格尔旗"},{"areaId":399,"areaName":"鄂托克前旗"},{"areaId":400,"areaName":"鄂托克旗"},{"areaId":401,"areaName":"杭锦旗"},{"areaId":402,"areaName":"乌审旗"},{"areaId":403,"areaName":"伊金霍洛旗"}]}<br/>
+<---测试结果---><br/>
+比较响应数据  - 参数  -  请求1参数值  -  请求1参数值<br/>
+Diff  -  key  -  value1  -  value2<br/>
+assert - Code - 10000 - 10000<br/>
+assert - Message - 成功 - 成功<br/>
+assert - areaId - 396 - 396<br/>
+assert - areaName - 东胜区 - 东胜区<br/>
+assert - areaId - 397 - 397<br/>
+assert - areaName - 达拉特旗 - 达拉特旗<br/>
+assert - areaId - 398 - 398<br/>
+assert - areaName - 准格尔旗 - 准格尔旗<br/>
+assert - areaId - 399 - 399<br/>
+assert - areaName - 鄂托克前旗 - 鄂托克前旗<br/>
+assert - areaId - 400 - 400<br/>
+assert - areaName - 鄂托克旗 - 鄂托克旗<br/>
+assert - areaId - 401 - 401<br/>
+assert - areaName - 杭锦旗 - 杭锦旗<br/>
+assert - areaId - 402 - 402<br/>
+assert - areaName - 乌审旗 - 乌审旗<br/>
+assert - areaId - 403 - 403<br/>
+assert - areaName - 伊金霍洛旗 - 伊金霍洛旗<br/>
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>
