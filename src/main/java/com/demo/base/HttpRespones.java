@@ -3,11 +3,9 @@ package com.demo.base;
 import java.io.*;
 
 import java.net.HttpURLConnection;
-
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 import org.testng.log4testng.Logger;
-
 
 /**
  * Created by GanCF on 2017/3/15.

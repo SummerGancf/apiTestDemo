@@ -94,7 +94,7 @@
                     <argLine>-Xms512m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=128m</argLine>
                     <forkCount>0</forkCount>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testcase.xml</suiteXmlFile>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <!--定义maven运行测试生成的报表路径 -->
                     <reportsDirectory>./result/test-report</reportsDirectory>
