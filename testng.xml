@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="false">
   <test name="Test">
     <classes>
-      <class name="com.demo.test.testdemo.MyProject"/>
+      <class name="com.demo.test.testdemo.TestQuery"/>
     </classes>
   </test> <!-- Test -->
    <listeners>
