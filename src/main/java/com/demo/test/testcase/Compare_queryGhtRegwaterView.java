@@ -41,7 +41,7 @@ public class Compare_queryGhtRegwaterView {
 			Param1.put("ghthosdeptid", 545);			
 			Reporter.log("【正常用例】:");
 			queryGhtRegwaterAll.seturl(url);
-			httpResult1=queryGhtRegwaterAll.getHttpRespone(Api1,Param1,method);
+			httpResult1=queryGhtRegwaterAll.getHttpRespone(Api1,Param1);
 			Reporter.log("请求1地址: "+queryGhtRegwaterAll.geturl());
 	        Reporter.log("返回结果1: "+httpResult1);
 	        Param2.put("tag", 1);
@@ -50,7 +50,7 @@ public class Compare_queryGhtRegwaterView {
 			Param2.put("ghthospitalid", 31);
 			Param2.put("ghthosdeptid", 545);
 			queryGhtRegwaterView.seturl(url);
-			httpResult2=queryGhtRegwaterView.getHttpRespone(Api2,Param2,method);
+			httpResult2=queryGhtRegwaterView.getHttpRespone(Api2,Param2);
 			Reporter.log("请求2地址: "+queryGhtRegwaterView.geturl());
 	        Reporter.log("返回结果2: "+httpResult2);
 	        Diff.JsonDiff(httpResult1,httpResult2);

@@ -16,7 +16,7 @@ import java.io.*;
 public class TestCaseFactoryForAll {
     public static void main(String[] args) {
 
-        final String caseFolder = "src/com/jkzl/test/autotestcase";
+        final String caseFolder = "src/com/demo/test/autotestcase";
         File sourceFile = null;
         String sheetName = null;
         int sheetNum = 0;
@@ -79,7 +79,7 @@ public class TestCaseFactoryForAll {
 //								+"import org.testng.log4testng.Logger;\n"
 //								+"import com.demo.base.Common;\n"
 //								+"import com.demo.base.HttpRespones;\n"
-                            +"import com.jkzl.test.base.BaseParpare;\n"
+                            +"import com.demo.test.base.BaseParpare;\n"
                             + "public class "
                             + functionName.replaceFirst(functionName.substring(
                                     0, 1), functionName.substring(0, 1)

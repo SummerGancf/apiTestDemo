@@ -30,11 +30,11 @@ public class Compare {
 		try {
 			Param1.put("cityId", 32);
 			Reporter.log("【正常用例】:");
-			httpResult1=getAreaByCity.getHttpRespone(Api,Param1,method);
+			httpResult1=getAreaByCity.getHttpRespone(Api,Param1);
 			Reporter.log("请求1地址: "+getAreaByCity.geturl());
 	        Reporter.log("返回结果1: "+httpResult1);
 	        Param2.put("cityId", 32);
-			httpResult2=getAreaByCity.getHttpRespone(Api,Param2,method);
+			httpResult2=getAreaByCity.getHttpRespone(Api,Param2);
 			Reporter.log("请求2地址: "+getAreaByCity.geturl());
 	        Reporter.log("返回结果2: "+httpResult2);
 	        Diff.JsonDiff(httpResult1,httpResult2);
@@ -50,11 +50,11 @@ public class Compare {
 		try {
 			Param1.put("cityId", 32);
 			Reporter.log("【正常用例】:");
-			httpResult1=getAreaByCity.getHttpRespone(Api,Param1,method);
+			httpResult1=getAreaByCity.getHttpRespone(Api,Param1);
 			Reporter.log("请求1地址: "+getAreaByCity.geturl());
 	        Reporter.log("返回结果1: "+httpResult1);
 	        Param2.put("cityId", 31);
-			httpResult2=getAreaByCity.getHttpRespone(Api,Param2,method);
+			httpResult2=getAreaByCity.getHttpRespone(Api,Param2);
 			Reporter.log("请求2地址: "+getAreaByCity.geturl());
 	        Reporter.log("返回结果2: "+httpResult2);
 	        Diff.JsonDiff(httpResult1,httpResult2);

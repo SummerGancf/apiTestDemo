@@ -34,7 +34,7 @@ public class HttpAction {
 
 			Reporter.log("【正常用例】:获取" + Api + "成功");
 			httpResponse.seturl("http://172.19.0.26/WSGW/rest?");
-			httpResult = httpResponse.getHttpRespone(Api, Param, method);
+			httpResult = httpResponse.getHttpRespone(Api, Param);
 			Reporter.log("请求地址: " + httpResponse.geturl());
 			Reporter.log("返回结果: " + httpResult);
 			Code = Common.getJsonValue(httpResult, "Code");
